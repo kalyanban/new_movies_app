@@ -37,8 +37,15 @@ const Register = () => {
     return (
         <div className="register">
             <form className="register-form" onSubmit={handleRegister}>
-                <input type="email" placeholder="Email" className="input" value={email} onChange={onChangeEmail} required />
-                <input type="password" placeholder="Password" className="input" value={password} onChange={onChangePassword} required />
+                <img src="https://res.cloudinary.com/dwdspbybh/image/upload/v1738304017/logo-removebg-preview_qy0ypw.png" alt="app logo" className="app-logo" />
+                <div className="input-container">
+                    <label className="label" htmlFor="regEmail">Your Email</label>
+                    <input type="email" placeholder="Email" id="regEmail" className="input" value={email} onChange={onChangeEmail} required />
+                </div>
+                <div className="input-container">
+                    <label className="label" htmlFor="regPassword">Your Password</label>
+                    <input type="password" placeholder="Password" id="regPassword" className="input" value={password} onChange={onChangePassword} required />
+                </div>
                 <button type="submit" className="submit-button">Register</button>
             </form>
         </div>

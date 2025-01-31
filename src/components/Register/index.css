@@ -1,0 +1,30 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://res.cloudinary.com/dwdspbybh/image/upload/v1738302818/login-bg_udsj4q.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.register-form {
+    height: auto;
+    width: 80%;
+    padding: 16px;
+    background-color: rgb(37, 34, 34);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app-logo {
+    height: 200px;
+    width: 260px;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    width: 70%;
+}
