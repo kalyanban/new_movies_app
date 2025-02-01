@@ -31,19 +31,21 @@ const Login = ({setAuth}) => {
         }
     }
 
-    const newRegBtn = () => {
-        navigate("/register")
-    }
-
     return (
         <div className="login">
             <form className="form" onSubmit={handleLogin}>
-                <input type="email" placeholder="Email" value={email} className="input" onChange={onChangeEmail} required />
-                <input type="password" placeholder="Password" value={password} className="input" onChange={onChangePassword} required />
+            <img src="https://res.cloudinary.com/dwdspbybh/image/upload/v1738304017/logo-removebg-preview_qy0ypw.png" alt="app logo" className="app-logo" />
+                <div className="input-container">
+                    <label className="label" htmlFor="email">Email</label>
+                    <input type="email" placeholder="Email" value={email} id="email" className="input" onChange={onChangeEmail} required />
+                </div>
+                <div className="input-container">
+                    <label className="label" htmlFor="password">Password</label>
+                    <input type="password" placeholder="Password" value={password} id="password" className="input" onChange={onChangePassword} required />
+                </div>
                 <button type="submit" className="submit-button">Login</button>
+                <p className="dont">Don't have an account? <span><a href="/register" className="log-reg">Register Here</a></span></p>
             </form>
-            <p>new user. register here.</p>
-            <button type="button" onClick={newRegBtn}>Register Here</button>
         </div>
     )
 }

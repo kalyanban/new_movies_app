@@ -5,6 +5,7 @@
   "dependencies": {
     "cra-template": "1.2.0",
     "js-cookie": "^3.0.5",
+    "movies-app": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^4.12.0",

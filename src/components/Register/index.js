@@ -23,7 +23,7 @@ const Register = () => {
 
         const existingUser = users.find((user) => user.email === email)
         if (existingUser) {
-            alert("User already registered. Please Login.")
+            alert("User already exists. Please Login.")
             navigate("/login")
             return
         }
@@ -36,7 +36,7 @@ const Register = () => {
 
     return (
         <div className="register">
-            <form className="register-form" onSubmit={handleRegister}>
+            <form className="form" onSubmit={handleRegister}>
                 <img src="https://res.cloudinary.com/dwdspbybh/image/upload/v1738304017/logo-removebg-preview_qy0ypw.png" alt="app logo" className="app-logo" />
                 <div className="input-container">
                     <label className="label" htmlFor="regEmail">Your Email</label>

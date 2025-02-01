@@ -1,21 +1,18 @@
 import React from "react"
-import { useNavigate } from "react-router-dom"
+
+import "./index.css"
+
+import Header from "../Header"
 
 
-const Home = ({setAuth}) => {
-    const navigate = useNavigate()
-
-    const handleLogout = () => {
-        localStorage.removeItem("token")
-        setAuth(false)
-        navigate("/login")
-    }
-
+const Home = () => {
     return (
-        <div className="home">
-            <h1>Hello, Welcome!!!</h1>
-            <button type="button" onClick={handleLogout}>Logout</button>
-        </div>
+        <>
+            <Header />
+            <div className="home">
+                <h1>Hello, Welcome to the Movies App!</h1>
+            </div>
+        </>
     )
 }
 export default Home

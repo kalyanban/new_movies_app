@@ -6,22 +6,32 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem("token") ? true : false
+  });
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
-      setIsAuthenticated(true);
-    }
+    setIsAuthenticated(!!token)
   }, []);
+
+  const handleLogin = () => {
+    localStorage.setItem("token", "dummy-token")
+    setIsAuthenticated(true)
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem("token")
+    setIsAuthenticated(false)
+  }
 
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/login"} />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login setAuth={setIsAuthenticated} />} />
-        <Route path="/home" element={isAuthenticated ? <Home setAuth={setIsAuthenticated} /> : <Navigate to="/login" />} />
+        <Route path="/login" element={<Login setAuth={handleLogin} />} />
+        <Route path="/home" element={isAuthenticated ? <Home setAuth={handleLogout} /> : <Navigate to="/login" />} />
       </Routes>
     </Router>
   );

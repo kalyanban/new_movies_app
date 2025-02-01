@@ -1,0 +1,124 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    background-color: rgb(36, 33, 33);
+    overflow-x: hidden;
+}
+.main-head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 0;
+}
+.header-logo {
+    height: 100px;
+    width: 140px;
+    cursor: pointer;
+}
+.header-tabs-container {
+    display: none;
+}
+.menu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.menu-icon {
+    font-size: 35px;
+    color: white;
+}
+.sm-header-tabs {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    list-style-type: none;
+    color: white;
+    gap: 6px;
+    margin-top: 0;
+}
+.sm-header-tabs.open {
+    display: flex;
+}
+.header-tab {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 16px;
+    cursor: pointer;
+}
+.header-tab:hover {
+    color: rgb(216, 83, 83);
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    align-self: center;
+    margin-bottom: 15px;
+}
+.search-movies-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 75%;
+    background-color: white;
+}
+.search-bar {
+    height: 30px;
+    width: 65%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding-left: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+}
+.search-icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.search-icon {
+    font-size: 18px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+    .header-logo {
+        width: 200px;
+    }
+    .search-container {
+        width: 65%;
+    }
+    .header-tabs-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+        list-style-type: none;
+    }
+    .lg-header-tab {
+        font-size: 18px;
+        font-weight: 600;
+        padding-left: 16px;
+        cursor: pointer;
+        color: white;
+    }
+    .lg-header-tab:hover {
+        color: rgb(216, 83, 83);
+    }
+}
